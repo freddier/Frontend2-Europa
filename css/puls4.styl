@@ -6,12 +6,24 @@ body
 	color gris_oscuro
 	font-family Arial
 	font-size 16px
-
+nav
+	background #06BCDD
+	text-align center
+	a
+		color white
+		text-decoration none
+	li
+		display inline-block
+		padding 10px 5px
+	
+	.menu
+		white-space nowrap
+		overflow-x auto
 header
 	background gris_oscuro
 	color white
 	padding 0.5em
-
+	overflow hidden
 	.logo
 		border-right 1px solid azul
 		width 60px
@@ -26,7 +38,21 @@ header
 			font-weight normal
 			margin 0
 			padding	0
-
+	.usuario
+		position absolute
+		right 10px 
+		top 10px
+		.avatar
+			border-radius 50%
+			overflow hidden
+			img 
+				width 50px
+				vertical-align top
+		.flechita
+			background
+ul
+	padding-left 0
+	margin 0
 .left
 	float left
 
