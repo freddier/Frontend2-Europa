@@ -14,6 +14,19 @@ header .titular .titulo{font-size:18px;font-weight:normal;margin:0;padding:0}
 header .usuario{position:absolute;right:10px;top:10px;}
 header .usuario .avatar{border-radius:50%;overflow:hidden;}
 header .usuario .avatar img{width:50px;vertical-align:top}
+.posts{padding:.5em;}
+.posts .post{background:#fff;border-radius:0 0 .5em .5em;box-shadow:2px 2px 10px rgba(0,0,0,0.5);color:gris_texto;}
+.posts .post .acciones{border-top:3px solid #22bce0;padding:.5em;}
+.posts .post .acciones .datos{float:right;margin:0}
+.posts .post .acciones .down{color:#f00}
+.posts .post .acciones .up{color:#008000}
+.posts .post .descripcion .detalles{height:160px;margin:0 0 0 130px;}
+.posts .post .descripcion .detalles .autor{margin:.5em 0 2em 0}
+.posts .post .descripcion .detalles .fecha{float:right;margin:0 1em 0 0}
+.posts .post .descripcion .detalles .tag{background:#22bce0;border-radius:.5em;color:#fff;padding:.2em .5em;text-decoration:none}
+.posts .post .descripcion .detalles .titulo{color:#444;font-size:18px;font-style:italic;margin:0;padding:.5em .5em 0 0}
+.posts .post .descripcion .imagen{float:left;}
+.posts .post .descripcion .imagen img{height:160px;width:120px}
 .left{float:left}
 .right{float:right}
 .degradado_menu:after{
