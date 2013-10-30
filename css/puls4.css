@@ -1,8 +1,9 @@
 body{background:#e8e8e8;color:#444;font-family:Arial;font-size:16px}
 nav{background:#06bcdd;text-align:center;}
-nav a{color:#fff;text-decoration:none}
-nav li{display:inline-block;padding:10px 5px}
-nav .menu{white-space:nowrap;overflow-x:auto}
+nav a{color:#fff;display:block;padding:.5em;text-decoration:none;}
+nav a:hover{background:#2398af}
+nav li{display:inline-block}
+nav .menu{border-top:5px solid #2398af;overflow-x:auto;white-space:nowrap}
 header{background:#444;color:#fff;padding:.5em;overflow:hidden;}
 header .logo{border-right:1px solid #22bce0;width:60px;}
 header .logo img{width:52px}
