@@ -1,65 +1,100 @@
 azul = #22BCE0
 gris_oscuro = #444
 
-body
-	background #E8E8E8
-	color gris_oscuro
-	font-family Arial
-	font-size 16px
-nav
-	background #06BCDD
-	text-align center
-	a
-		color white
-		display block
-		padding 0.5em
-		text-decoration none
-		&:hover
-			background #2398AF
-	li
-		display inline-block
-	
-	.menu
-		border-top 5px solid #2398AF
-		overflow-x auto
-		white-space nowrap
-header
-	background gris_oscuro
-	color white
-	padding 0.5em
-	overflow hidden
-	.logo
-		border-right 1px solid azul
-		width 60px
 
-		img
-			width 52px
-	
-	.titular
-		margin 0 80px 0 70px
-		.titulo
-			font-size 18px
-			font-weight normal
-			margin 0
-			padding	0
-	.usuario
-		position absolute
-		right 10px 
-		top 10px
-		.avatar
-			border-radius 50%
-			overflow hidden
-			img 
-				width 50px
-				vertical-align top
-		.flechita
-			background
-ul
-	padding-left 0
-	margin 0
+@import "nib/vendor"
+@import 'nib/gradients'
+body
+    background #E8E8E8
+    color gris_oscuro
+    font-family Arial
+    font-size 16px
+nav
+    text-align center
+    position relative
+    a
+        color white
+        display block
+        padding 0 0.8em
+        text-decoration none
+        &:hover
+            background #2398AF
+    li
+        display inline-block
+    
+    .menu
+        background #06BCDD
+        border-left 15px solid white
+        height 40px
+        line-height 40px
+        margin 0
+        overflow-x auto
+        padding-left 0
+        white-space nowrap
+        
+        &:after
+            content ""
+            height inherit
+            position absolute
+            right 0
+            top 0
+            width 100px
+        &:before
+            border-bottom 20px solid transparent
+            border-left 7px solid white
+            border-top 20px solid transparent
+            content ""
+            left 15px
+            position absolute
+            top 0
+
+
+
+header
+    background gris_oscuro
+    color white
+    padding 0.5em
+    overflow hidden
+    .logo
+        border-right 1px solid azul
+        width 60px
+
+        img
+            width 52px
+    
+    .titular
+        margin 0 80px 0 70px
+        .titulo
+            font-size 18px
+            font-weight normal
+            margin 0
+            padding 0
+    .usuario
+        position absolute
+        right 10px 
+        top 10px
+        .avatar
+            border-radius 50%
+            overflow hidden
+            img 
+                width 50px
+                vertical-align top
+        .flechita
+            background
+
 .left
-	float left
+    float left
 
 .right
-	float right
-
+    float right
+@css{
+.degradado_menu:after{
+    background: -moz-linear-gradient(left,  rgba(125,185,232,0) 0%, rgba(124,185,232,0) 1%, rgba(6,188,221,1) 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(125,185,232,0)), color-stop(1%,rgba(124,185,232,0)), color-stop(100%,rgba(6,188,221,1)));
+    background: -webkit-linear-gradient(left,  rgba(125,185,232,0) 0%,rgba(124,185,232,0) 1%,rgba(6,188,221,1) 100%);
+    background: -o-linear-gradient(left,  rgba(125,185,232,0) 0%,rgba(124,185,232,0) 1%,rgba(6,188,221,1) 100%);
+    background: -ms-linear-gradient(left,  rgba(125,185,232,0) 0%,rgba(124,185,232,0) 1%,rgba(6,188,221,1) 100%);
+    background: linear-gradient(to right,  rgba(125,185,232,0) 0%,rgba(124,185,232,0) 1%,rgba(6,188,221,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007db9e8', endColorstr='#06bcdd',GradientType=1 );
+}
+}
