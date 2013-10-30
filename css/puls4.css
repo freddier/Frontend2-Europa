@@ -1,40 +1,10 @@
 body{background:#e8e8e8;color:#444;font-family:Arial;font-size:16px}
-nav{text-align:center;position:relative;}
-nav a{color:#fff;display:block;padding:0 .8em;text-decoration:none;}
-nav a:hover{background:#2398af}
-nav li{display:inline-block}
-nav .menu{background:#06bcdd;border-left:15px solid #fff;height:40px;line-height:40px;margin:0;overflow-x:auto;padding-left:0;white-space:nowrap;}
-nav .menu:after{content:"";height:inherit;position:absolute;right:0;top:0;width:100px}
-nav .menu:before{border-bottom:20px solid transparent;border-left:7px solid #fff;border-top:20px solid transparent;content:"";left:15px;position:absolute;top:0}
-header{background:#444;box-shadow:0 5px 0 rgba(0,0,0,0.2);color:#fff;overflow:hidden;padding:.5em;position:relative;z-index:1;}
+header{background:#444;color:#fff;padding:.5em;}
 header .logo{border-right:1px solid #22bce0;width:60px;}
 header .logo img{width:52px}
 header .titular{margin:0 80px 0 70px;}
 header .titular .titulo{font-size:18px;font-weight:normal;margin:0;padding:0}
-header .usuario{position:absolute;right:10px;top:10px;}
-header .usuario .avatar{border-radius:50%;overflow:hidden;}
-header .usuario .avatar img{width:50px;vertical-align:top}
-.posts{padding:.5em;}
-.posts .post{background:#fff;border-radius:0 0 .5em .5em;box-shadow:2px 2px 10px rgba(0,0,0,0.5);color:gris_texto;}
-.posts .post .acciones{border-top:3px solid #22bce0;padding:.5em;}
-.posts .post .acciones .datos{float:right;margin:0}
-.posts .post .acciones .down{color:#f00}
-.posts .post .acciones .up{color:#008000}
-.posts .post .descripcion .detalles{height:160px;margin:0 0 0 130px;}
-.posts .post .descripcion .detalles .autor{margin:.5em 0 2em 0}
-.posts .post .descripcion .detalles .fecha{float:right;margin:0 1em 0 0}
-.posts .post .descripcion .detalles .tag{background:#22bce0;border-radius:.5em;color:#fff;padding:.2em .5em;text-decoration:none}
-.posts .post .descripcion .detalles .titulo{color:#444;font-size:18px;font-style:italic;margin:0;padding:.5em .5em 0 0}
-.posts .post .descripcion .imagen{float:left;}
-.posts .post .descripcion .imagen img{height:160px;width:120px}
+header .usuario .avatar img{width:50px;border-radius:50%}
+nav{background:#22bce0}
 .left{float:left}
 .right{float:right}
-.degradado_menu:after{
-  background: -moz-linear-gradient(left,  rgba(125,185,232,0) 0%, rgba(124,185,232,0) 1%, rgba(6,188,221,1) 100%);
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(125,185,232,0)), color-stop(1%,rgba(124,185,232,0)), color-stop(100%,rgba(6,188,221,1)));
-  background: -webkit-linear-gradient(left,  rgba(125,185,232,0) 0%,rgba(124,185,232,0) 1%,rgba(6,188,221,1) 100%);
-  background: -o-linear-gradient(left,  rgba(125,185,232,0) 0%,rgba(124,185,232,0) 1%,rgba(6,188,221,1) 100%);
-  background: -ms-linear-gradient(left,  rgba(125,185,232,0) 0%,rgba(124,185,232,0) 1%,rgba(6,188,221,1) 100%);
-  background: linear-gradient(to right,  rgba(125,185,232,0) 0%,rgba(124,185,232,0) 1%,rgba(6,188,221,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007db9e8', endColorstr='#06bcdd',GradientType=1 );
-}
