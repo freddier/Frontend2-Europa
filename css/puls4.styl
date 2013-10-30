@@ -1,9 +1,6 @@
 azul = #22BCE0
 gris_oscuro = #444
 
-
-@import "nib/vendor"
-@import 'nib/gradients'
 body
     background #E8E8E8
     color gris_oscuro
@@ -52,9 +49,12 @@ nav
 
 header
     background gris_oscuro
+    box-shadow 0 5px 0 rgba(black,.2)
     color white
-    padding 0.5em
     overflow hidden
+    padding 0.5em
+    position relative
+    z-index 1
     .logo
         border-right 1px solid azul
         width 60px
