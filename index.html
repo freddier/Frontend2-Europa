@@ -7,6 +7,7 @@
 	<title>Puls4: Comunidad para gente atractiva y millonaria</title>
 	<link rel="stylesheet" href="css/normalize.css" />
 	<link rel="stylesheet" href="css/puls4.css" />
+	<script src="jquery-2.0.3.min.js"></script>
 </head>
 <body>
 	<header>
@@ -47,6 +48,13 @@
 			<li><a href="#">CSS3</a></li>
 		</ul>
 	</nav>
+	<form action="">
+		<p><label for="titulo">Título</label><input name="titulo" type="text"></p>
+		<p><label for="autor">Autor</label><input name="autor" type="text"></p>
+		<p><label for="tag">Tag</label><input name="tag" type="text"></p>
+		<p><label for="imagen">Imagen</label><input name="imagen" type="file"></p>
+		<input type="submit" value="Publicar">
+	</form>
 	<section class="posts">
 		<article class="post">
 			<div class="descripcion">
@@ -237,6 +245,58 @@
 			</span>
 		</h3>
 	</footer>
+	<script>
+	$(function() {
+		function mostrarForm() {
+			$('form').slideToggle();
+		}
+
+		function procesarForm(e) {
+			e.preventDefault();
+			var titulo = $('input[name=titulo]').val();
+			var autor = $('input[name=autor]').val();
+			var tag = $('input[name=tag]').val();
+			// var imagen = $('input[name=imagen]').val();
+			
+			$('section.posts').prepend('<article class="post"> ' +
+	'		<div class="descripcion"> ' +
+'				<figure class="imagen"> ' +
+'					<img src="imagenes/foto.jpg" /> ' +
+'				</figure> ' +
+'				<div class="detalles"> ' +
+'					<h2 class="titulo"> ' +
+						titulo +
+'					</h2> ' +
+'					<p class="autor"> ' +
+'						por <a href="#">' + autor + '</a> ' +
+'					</p> ' +
+'					<a class="tag" href="#">'+tag+'</a> ' +
+'					<p class="fecha">hace <strong>0</strong> min</p> ' +
+'				</div> ' +
+'			</div> ' +
+'			<div class="acciones"> ' +
+'				<div class="votos"> ' +
+'					<a class="up" href="#"></a> ' +
+'					<span class="total">0</span> ' +
+'					<a class="down" href="#"></a> ' +
+'				</div> ' +
+'				<div class="datos"> ' +
+'					<a class="comentarios" href="#"> ' +
+'						0 ' +
+'					</a> ' +
+'					<a class="estrellita" href="#"></a> ' +
+'				</div> ' +
+'			</div> ' +
+'		</article>');
+			$('form input[type=text]').val('');
+			$('form').slideUp();
+		}
+
+		$('.publicar').on('click', mostrarForm);
+
+		$('form').on('submit', procesarForm);
+	})
+	</script>
 </body>
 </html>
 
