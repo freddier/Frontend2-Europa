@@ -26,6 +26,11 @@
 					Publicar
 				</a>
 			</div>
+			<div>
+				<a href="#12" class="sizer">A</a>
+				<a href="#16" class="sizer">A</a>
+				<a href="#22" class="sizer">A</a>
+			</div>
 		</div>
 		<div class="usuario">
 			<figure class="avatar">
@@ -75,7 +80,7 @@
 			<div class="acciones">
 				<div class="votos">
 					<a class="up" href="#"></a>
-					<span class="total">156</span>
+					<span class="total">12</span>
 					<a class="down" href="#"></a>
 				</div>
 				<div class="datos">
@@ -105,7 +110,7 @@
 			<div class="acciones">
 				<div class="votos">
 					<a class="up" href="#"></a>
-					<span class="total">156</span>
+					<span class="total">33</span>
 					<a class="down" href="#"></a>
 				</div>
 				<div class="datos">
@@ -135,7 +140,7 @@
 			<div class="acciones">
 				<div class="votos">
 					<a class="up" href="#"></a>
-					<span class="total">156</span>
+					<span class="total">5</span>
 					<a class="down" href="#"></a>
 				</div>
 				<div class="datos">
@@ -247,9 +252,24 @@
 	</footer>
 	<script>
 	$(function() {
+		function crearSizer(pixels) {
+			return function() {
+				$('body').css('font-size', pixels+'px');
+			}
+		}
+
+		$('.sizer').each(function(i, link) {
+			var pixels = $(link).prop('hash').substring(1);
+			$(link)
+				.css('font-size', pixels+'px')
+				.on('click', crearSizer(pixels));
+		});
+
 		function mostrarForm() {
 			$('form').slideToggle();
 		}
+
+		$('.publicar').on('click', mostrarForm);
 
 		function procesarForm(e) {
 			e.preventDefault();
@@ -288,14 +308,36 @@
 '				</div> ' +
 '			</div> ' +
 '		</article>');
+			
 			$('form input[type=text]').val('');
 			$('form').slideUp();
 		}
 
-		$('.publicar').on('click', mostrarForm);
-
 		$('form').on('submit', procesarForm);
-	})
+
+		function crearContador(inicial) {
+			var contador = inicial || 0;
+			return {
+				up : function() {
+					return ++contador;
+				},
+				down : function() {
+					return --contador;
+				}
+			};
+		};
+
+		$('.total').each(function(i, elem) {
+			var contador = crearContador(elem.innerHTML);
+			$(elem)
+				.siblings('.up').on('click', function() {
+					$(elem).html(contador.up());
+				})
+				.siblings('.down').on('click', function() {
+					$(elem).html(contador.down());
+				})
+		});
+	});
 	</script>
 </body>
 </html>
